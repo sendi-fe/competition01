@@ -4,7 +4,8 @@
   "description": "sendi fe first game",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
   },
   "repository": {
     "type": "git",
@@ -18,5 +19,12 @@
   "bugs": {
     "url": "https://github.com/sendi-fe/competition01/issues"
   },
-  "homepage": "https://github.com/sendi-fe/competition01#readme"
+  "homepage": "https://github.com/sendi-fe/competition01#readme",
+  "devDependencies": {
+    "css-loader": "^0.28.4",
+    "extract-text-webpack-plugin": "^2.1.2",
+    "file-loader": "^0.11.2",
+    "jquery": "^3.2.1",
+    "style-loader": "^0.18.2"
+  }
 }
