@@ -19,6 +19,10 @@ module.exports = {
 	     	    use: [
 	     	          'file-loader'
 	     	    ]
+	     	},
+	     	{
+	     	    test: require.resolve('jquery'),
+	     	    loader: 'expose-loader?jQuery!expose-loader?$'
 	     	}
 	   	]
 	},
