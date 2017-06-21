@@ -8,7 +8,5 @@ module.exports = {
 		this.initHeader();
 		this.initData();
 		this.initBody();
-		// this.initSearch();
-		// this.initPage();
 	}
 }
