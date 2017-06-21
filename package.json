@@ -30,5 +30,11 @@
     "jquery": "^3.2.1",
     "style-loader": "^0.18.2",
     "webpack": "^3.0.0"
+<<<<<<< HEAD
+=======
+  },
+  "dependencies": {
+    "jquery-pagination": "^1.1.0"
+>>>>>>> wangzb
   }
 }
