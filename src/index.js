@@ -25,5 +25,5 @@ import initTable from './js/create_table.js';
 })(jquery)
 
 // 初始化表格
-$.fn.sendiTable.init($('#sendi-table'), {data: data});
+$.fn.sendiTable.init($('#sendi-table')[0], {data: data});
 
