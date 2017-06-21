@@ -2,8 +2,8 @@ module.exports = {
   cloneData: function() {
     var clone = [];
 
-    for(var i = 0; i < this.data.length; i++) {
-        clone.push(deepClone(this.data[i]));
+    for(var i = 0; i < this.options.length; i++) {
+        clone.push(deepClone(this.options[i]));
     }
 
     return clone;
