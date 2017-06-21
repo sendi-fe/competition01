@@ -23,7 +23,7 @@ import initTable from './js/create_table.js';
 		columns: [], // 列信息
 	}
 
-	$.fn.sendiTable = $.extend(true, {}, table, initTable);
+	$.fn.sendiTable = $.extend(true, {}, table, initTable, util, sort);
 })(jquery)
 
 // 初始化表格
