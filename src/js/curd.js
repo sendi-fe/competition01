@@ -15,8 +15,9 @@ module.exports = {
           //   '<button id="create">添加</button>' +
             '<label><input class="search"></label>');
 
-        $(".search").on("change", function() {
+        $(".search").on("keyup", function() {
           var val = $(this).val();
+          console.log(val)
           if(val == "") {
             that.options.currentData = that.options.data;
           } else {
