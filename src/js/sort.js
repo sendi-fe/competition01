@@ -10,17 +10,19 @@ module.exports = {
     for(var i in ops) {
       dataField = ops[i];
 
-
-
-
     }
 
     return cloneData;
   },
   search: function(target, ops) {//target为搜索关键词，ops为搜索范围数组
-    var cloneData = cloneData();//数据副本用以筛选
+    var cloneData = this.cloneData();//数据副本用以筛选
     var selectedData = [];//筛选后的对象数组
 
+    for(var i in cloneData.length) {
+      for(key in cloneData[i]) {
+
+      }
+    }
 
     return selectedData;
   }

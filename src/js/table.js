@@ -6,5 +6,7 @@ module.exports = {
 		this.initTable();
 		this.initHeader();
 		this.initBody();
+
+		／／this.search();
 	}
 }

@@ -2,12 +2,12 @@ module.exports = {
   cloneData: function() {
     var clone = [];
 
-    for(var i = 0; i < this.options.length; i++) {
-        clone.push(deepClone(this.options[i]));
+    for(var i = 0; i < this.options.data.length; i++) {
+        clone.push(this.deepClone(this.options.data[i]));
     }
 
     return clone;
-  }，
+  },
   deepClone: function(obj) {
     var objClone;
     if(obj.constructor == Object) {
