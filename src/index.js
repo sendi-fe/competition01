@@ -6,6 +6,7 @@ require('./css/index.css');
 import data from './text.js';
 import table from './js/table.js';
 import initTable from './js/create_table.js';
+import initPage from './js/page.js';
 
 // 创建jquery插件
 (function($){
@@ -21,7 +22,7 @@ import initTable from './js/create_table.js';
 		columns: [], // 列信息
 	}
 	
-	$.fn.sendiTable = $.extend(true, {}, table, initTable);
+	$.fn.sendiTable = $.extend(true, {}, table, initTable,initPage);
 })(jquery)
 
 // 初始化表格
