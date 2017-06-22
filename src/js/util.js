@@ -2,12 +2,21 @@ module.exports = {
   cloneData: function() {
     var clone = [];
 
+<<<<<<< HEAD
     for(var i = 0; i < this.data.length; i++) {
         clone.push(deepClone(this.data[i]));
     }
 
     return clone;
   }，
+=======
+    for(var i = 0; i < this.options.currentData.length; i++) {
+        clone.push(this.deepClone(this.options.currentData[i]));
+    }
+
+    return clone;
+  },
+>>>>>>> Sorting&Searching
   deepClone: function(obj) {
     var objClone;
     if(obj.constructor == Object) {
@@ -26,8 +35,11 @@ module.exports = {
       }
     }
 
+<<<<<<< HEAD
     objClone.toString = obj.toString;
     objClone.valueOf = obj.valueOf;
+=======
+>>>>>>> Sorting&Searching
     return objClone;
   }
 }

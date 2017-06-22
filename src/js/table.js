@@ -6,6 +6,10 @@ module.exports = {
 		this.initTable();
 		this.initHeader();
 		this.initBody();
+<<<<<<< HEAD
+=======
+		this.initPage();
+>>>>>>> Sorting&Searching
 		this.initToolBar();
 	}
 }
