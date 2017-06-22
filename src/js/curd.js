@@ -2,8 +2,6 @@
  * Created by wzb on 2017/6/20.
  * 表格增删改
  */
-<<<<<<< HEAD
-=======
 module.exports = {
 
     //顶部工具栏
@@ -34,4 +32,3 @@ module.exports = {
     }
 
 }
->>>>>>> Merge
