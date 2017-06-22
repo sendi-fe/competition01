@@ -3,6 +3,7 @@ module.exports = {
     var clone = [];
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     for(var i = 0; i < this.data.length; i++) {
         clone.push(deepClone(this.data[i]));
     }
@@ -10,12 +11,17 @@ module.exports = {
     return clone;
   }，
 =======
+=======
+>>>>>>> Sorting&Searching
     for(var i = 0; i < this.options.currentData.length; i++) {
         clone.push(this.deepClone(this.options.currentData[i]));
     }
 
     return clone;
   },
+<<<<<<< HEAD
+>>>>>>> Sorting&Searching
+=======
 >>>>>>> Sorting&Searching
   deepClone: function(obj) {
     var objClone;
@@ -36,8 +42,11 @@ module.exports = {
     }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     objClone.toString = obj.toString;
     objClone.valueOf = obj.valueOf;
+=======
+>>>>>>> Sorting&Searching
 =======
 >>>>>>> Sorting&Searching
     return objClone;
