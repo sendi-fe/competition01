@@ -11,13 +11,13 @@ module.exports = {
         this.$batchDelete = this.$toolbar.find('#batchDelete');
 
         $(this.$toolbar).append('<button id="batchDelete">批量删除</button>' +
-            '<botton id="create">添加</botton>' +
+            '<button id="create">添加</button>' +
             '<label for="search"><input id="search"></label>');
     },
     //弹出添加框
     initCreateBar: function () {
         $(this.$createButton).on('click', function () {
-            $(this.$container)
+
         })
     },
     //添加数据

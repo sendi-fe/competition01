@@ -52,9 +52,11 @@ module.exports = {
 		this.$header.html(html.join(''));
 	},
 	initBody: function(data) {
+		this.options.currentData = data || this.options.data;
+
 		var that = this,
 		    html = [],
-		    data = data || this.options.data,
+		    data = this.options.currentData;
 		    columns = this.options.columns;
 
 		this.$body = this.$el.find('>tbody');
