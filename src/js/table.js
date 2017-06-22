@@ -6,7 +6,7 @@ module.exports = {
 		this.initTable();
 		this.initHeader();
 		this.initBody();
-
-		／／this.search();
+		this.initPage();
+		this.initToolBar();
 	}
 }

@@ -14,11 +14,11 @@ module.exports = {
 	    this.$container.insertAfter(this.$el);
 	    this.$tableContainer = this.$container.find('.fixed-table-container');
 	    // this.$tableHeader = this.$container.find('.fixed-table-header');
-	    // this.$tableBody = this.$container.find('.fixed-table-body');
+	    this.$tableBody = this.$container.find('.fixed-table-body');
 	    this.$toolbar = this.$container.find('.fixed-table-toolbar');
 	    this.$pagination = this.$container.find('.fixed-table-pagination');
 
-	    this.$tableContainer.append(this.$el);
+	    this.$tableBody.append(this.$el);
 	    this.$container.after('<div class="clearfix"></div>');
 	},
 	initTable: function() {
@@ -51,10 +51,10 @@ module.exports = {
 
 		this.$header.html(html.join(''));
 	},
-	initBody: function() {
+	initBody: function(data) {
 		var that = this,
 		    html = [],
-		    data = this.options.data,
+		    data = data || this.options.data,
 		    columns = this.options.columns;
 
 		this.$body = this.$el.find('>tbody');
