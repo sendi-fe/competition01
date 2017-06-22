@@ -1,0 +1,59 @@
+.sendi-table  {
+	font-size: 12px;
+}
+
+.sendi-table .fixed-table-body table {
+	width: 100%;
+	border: 1px solid #F0F0F0;
+	border-collapse: collapse;
+}
+
+.sendi-table .fixed-table-body thead {
+	font-size: 13px;
+	color: #fff;
+	background: #0FB6E7;
+    border: 1px solid #0FB6E7;
+}
+
+.sendi-table .fixed-table-body th, .sendi-table .fixed-table-body td{
+	height: 30px;
+	vertical-align: middle;
+	text-align: left;
+	padding-left: 12px;
+}
+
+.sendi-table .fixed-table-body tbody tr {
+	border-bottom: 1px solid #F0F0F0;
+}
+
+.sendi-table .fixed-table-body tbody tr:nth-child(2n) {
+	background: #F7F7F9;
+}
+
+.sendi-table .fixed-table-body tbody tr:hover {
+	background: rgba(233,108,0,0.20);
+}
+
+.sendi-table .fixed-table-toolbar {
+	margin-bottom: 12px;
+}
+
+.sendi-table .fixed-table-toolbar:after {
+	content: '';
+	display: block;
+	clear: both;
+}
+.sendi-table  .fixed-table-toolbar label {
+  margin-top: 15px;
+  margin-right: 15px;
+  float: right;
+}
+.sendi-table  .fixed-table-toolbar .search {
+	width: 250px;
+	height: 30px;
+
+	border: 1px solid #00B5E9;
+	border-radius: 3px;
+	padding: 0 34px 0 10px;
+	font-size: 14px;
+}

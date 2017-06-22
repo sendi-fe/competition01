@@ -1,19 +1,20 @@
 module.exports = {
-  sortByKey: function(ops) {//ops为排序范围数组
-    var cloneData = cloneData();//数据副本用以排序
+  sortByKeys: function(ops) {//ops为排序范围数组
+    var sortedData = this.cloneData();//数据副本用以排序
     var dataField;//当前排序基于的列
 
     if(arguments.length == 0) {
-      return cloneData;
+      return sortedData;
     }
 
     for(var i in ops) {
       dataField = ops[i];
-      cloneData.sort(by(dataField));
+      sortedData.sort(this.by(dataField));
     }
 
-    //return cloneData;
-    this.initBody(cloneData);
+    //return sortedData;
+    // this.initBody(sortedData);
+    this.options.currentData = sortedData;
   },
   searchByKey: function(target, ops) {//target为搜索关键词，ops为搜索范围数组
     var cloneData = this.cloneData();//数据副本用以筛选
@@ -31,7 +32,8 @@ module.exports = {
     }
 
     //return selectedData;
-    this.initBody(selectedData);
+    // this.initBody(selectedData);
+    this.options.currentData = selectedData;
   },
   by: function(dataField) {
     return function(o, p){

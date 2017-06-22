@@ -37,6 +37,7 @@ module.exports = {
         });
 
         this.options.columns = columns;
+				this.options.currentData = this.options.data;
         this.columns = [];
         this.fieldsColumnsIndex = [];
 	},
@@ -45,18 +46,18 @@ module.exports = {
 		    html = [];
 	    html.push('<tr>');
 		$.each(this.options.columns, function (i, columns) {
-	        html.push('<th data-field=' + columns.field + ' style="width: 100px;">' + columns.title + '</th>');
+	        html.push('<th data-field=' + columns.field + ' class="table-head" style="width: 100px;">' + columns.title + '</th>');
 		});
 	    html.push('</tr>');
 
 		this.$header.html(html.join(''));
 	},
 	initBody: function(data) {
-		this.options.currentData = data || this.options.data;
+		// this.options.currentData = data || this.options.data;
 
 		var that = this,
 		    html = [],
-		    data = this.options.currentData;
+		    data = data || this.options.currentData;
 		    columns = this.options.columns;
 
 		this.$body = this.$el.find('>tbody');
@@ -71,6 +72,13 @@ module.exports = {
 			})
 			html.push('</tr>');
 		})
-		this.$body.html(html);
+		this.$body.html(html.join(''));
+
+		//event atachment
+		$(".table-head").on("click", function() {
+			var ops = [$(this).attr("data-field")];
+			that.sortByKeys(ops);
+			that.updatePage();
+		});
 	}
 }

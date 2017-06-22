@@ -6,13 +6,25 @@ module.exports = {
 
     //顶部工具栏
     initToolBar: function () {
-        console.log(this.$toolbar);
+        var that = this;
         this.$createButton = this.$toolbar.find('#create');
         this.$batchDelete = this.$toolbar.find('#batchDelete');
 
-        $(this.$toolbar).append('<button id="batchDelete">批量删除</button>' +
-            '<button id="create">添加</button>' +
-            '<label for="search"><input id="search"></label>');
+        $(this.$toolbar).append(
+          // '<button id="batchDelete">批量删除</button>' +
+          //   '<button id="create">添加</button>' +
+            '<label><input class="search"></label>');
+
+        $(".search").on("change", function() {
+          var val = $(this).val();
+          if(val == "") {
+            that.options.currentData = that.options.data;
+          } else {
+            that.searchByKey(val);
+          }
+
+          that.initPage();
+        });
     },
     //弹出添加框
     initCreateBar: function () {

@@ -5,9 +5,9 @@
 module.exports = {
 	initPage: function(){
 		var that = this;
-		var data = this.options.currentData;
+		var data = this.options.currentData || this.options.data;
 		this.list = 10;//每页显示条数
-		this.dataCount = this.options.currentData.length;//数据总量
+		this.dataCount = data.length;//数据总量
 		this.pageCount = Math.ceil(this.dataCount/this.list);//总共多少页
 		this.nowPage = 1;//当前页数
 
@@ -45,7 +45,7 @@ module.exports = {
 	updatePage: function() {
 		var beginList = Math.ceil(this.list*(this.nowPage-1));
 		var endLlist = Math.ceil(beginList+this.list);
-		var data = this.options.currentData.slice(beginList,endLlist);
-		this.initBody(data);
+		var data = this.options.currentData || this.options.data;
+		this.initBody(data.slice(beginList,endLlist));
 	}
 }
