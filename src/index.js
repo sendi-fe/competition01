@@ -11,7 +11,6 @@ import initTable from './js/create_table.js';
 import curd from './js/curd.js';
 import initPage from './js/page.js';
 
-
 // 创建jquery插件
 (function($){
 
