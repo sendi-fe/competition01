@@ -7,5 +7,6 @@ module.exports = {
 		this.initHeader();
 		this.initBody();
 		this.initToolBar();
+		this.initCreateBar();
 	}
 }
